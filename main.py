@@ -33,6 +33,5 @@ elif download_type == "hf_hub_download":
   path = hf_hub_download(repo_id=repo_id, repo_type=repo_type, filename=filename, cache_dir=cache_dir)
 else:
   raise ValueError(f"Unknown download type: {download_type}")
-  exit(1)
 
-print(f"Downloaded file path: {path}")
+print(f"\n\nDownloaded file path:\n  {path}\n\n")
