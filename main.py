@@ -5,11 +5,11 @@ repo_id = os.getenv("HUB_REPO_ID", "jer030/nanogpt")
 repo_type = os.getenv("HUB_REPO_TYPE", "dataset")
 download_type = os.getenv("HUB_DOWNLOAD_TYPE", "snapshot_download")
 hf_home = os.getenv("HF_HOME")
-cache_dir_env_var_value = os.getenv('HF_HUB_CACHE')
-filename = os.getenv('HUB_FILE_NAME', "config.json")
+cache_dir_env_var_value = os.getenv("HF_HUB_CACHE")
+filename = os.getenv("HUB_FILE_NAME", "config.json")
 default_cache_dir = "/output/.cache"
 
-if cache_dir_env_var_value and not cache_dir_env_var_value.startswith('/output/'):
+if cache_dir_env_var_value and not cache_dir_env_var_value.startswith("/output/"):
   print(f"Warning: The cache directory {cache_dir_env_var_value} does not start with '/output/'. If you manually set it, then it might have been overwritten. Using default cache directory instead: {default_cache_dir}")
   cache_dir_env_var_value = None
 
